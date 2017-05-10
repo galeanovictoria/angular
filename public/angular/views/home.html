@@ -1,0 +1,19 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-sm-8 col-sm-offset-2">
+            <div class="tweet" ng-repeat="tweet in tweets">
+                <div class="row" class="tweet" style="padding:10px;">
+                    <div class="col-sm-2 col-sm-offset-1"><img class="img-circle" width="100" ng-src="{{ tweet.userimg }}" alt=""></div>
+                    <div class="col-sm-6">
+                        <a href="#/view/{{ tweet.id }}"><h3 style="color:grey;">{{ tweet.username }}</h3></a>
+                        <p>{{ tweet.content }}</p>
+                    </div>
+                    <button class="delete-btn btn btn-outline-danger" ng-click="deleteTweet(tweet)">
+			            delete
+		            </button>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</div>

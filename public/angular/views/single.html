@@ -1,0 +1,23 @@
+<div ng-include="'angular/views/header.html'"></div>
+
+<div class="container">
+
+	<div class="tweet row">
+		<div>
+			<img ng-src="{{ tweet.userimg }}">
+		</div>
+		<div class="col">
+			<div class="username">{{ tweet.username }}</div>
+			<p>{{ tweet.content }}</p>
+		</div>
+        <div class="button-wrapper">
+            <button class="delete-btn btn btn-outline-danger" ng-click="deleteTweet(tweet)">
+			delete
+		    </button>
+		    <a href="#/edit/{{ tweet.id }}" class="btn btn-outline-info">
+				edit
+			</a>
+        </div>
+	</div>
+
+</div>
